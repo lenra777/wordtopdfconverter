@@ -12,16 +12,16 @@ Deployed using **Render (Free Tier)**.
 - Upload a Word document and download it as PDF  
 - Upload a PDF file and download it as Word (DOCX)  
 - Clean and responsive UI (Bootstrap 5)  
-- Lightweight Flask backend with `python-docx`, `reportlab`, and `pypandoc`
+- Lightweight Flask backend with `python-docx`, `pdf2docx`, and `pypandoc`
 
 ---
 
 ## 🛠 Tech Stack
-- **Backend**: Flask (Python)  
-- **Frontend**: HTML + Bootstrap 5  
-- **Libraries**:  
+- **Backend:** Flask (Python)  
+- **Frontend:** HTML + Bootstrap 5  
+- **Libraries:**  
   - `python-docx` – Word handling  
-  - `reportlab` – PDF generation  
+  - `pdf2docx` – PDF to Word conversion  
   - `pypandoc` – Format conversion  
   - `gunicorn` – Production server  
 
@@ -31,7 +31,7 @@ Deployed using **Render (Free Tier)**.
 1. Clone this repository:
    ```bash
    git clone https://github.com/lenra777/wordtopdfconverter.git
-   cd word-pdf-converter
+   cd wordtopdfconverter
 
 2. Create a virtual environment:
     ```bash
