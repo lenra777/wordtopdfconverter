@@ -34,15 +34,19 @@ Deployed using **Render (Free Tier)**.
    cd word-pdf-converter
 
 2. Create a virtual environment:
+    ```bash
     python -m venv venv
     source venv/bin/activate   # Mac/Linux
     venv\Scripts\activate      # Windows
 
 3. Install dependencies:
+    ```bash
     pip install -r requirements.txt
 
 4. Run the Flask app:
+    ```bash
     python app.py
 
 5. App will run at:
+    ```bash
     http://127.0.0.1:5000
