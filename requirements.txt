@@ -1,5 +1,4 @@
-Flask
-gunicorn
-python-docx
-reportlab
+flask
 pypandoc
+pdf2docx
+gunicorn

@@ -2,6 +2,12 @@ from flask import Flask, render_template, request, send_file
 import pypandoc, os, uuid
 from pdf2docx import Converter
 
+# Ensure pandoc is installed automatically
+try:
+    pypandoc.get_pandoc_version()
+except OSError:
+    pypandoc.download_pandoc()
+
 app = Flask(__name__)
 
 UPLOAD_FOLDER = "generated_files"
@@ -53,10 +59,16 @@ def index():
 
 @app.route("/download/<path:filename>")
 def download(filename):
-    return send_file(filename, as_attachment=True)
+    return send_file(filename, as_attachment=True, max_age=0)
+
+# Render is strict lol
+#@app.route("/download/<path:filename>")
+#def download(filename):
+#    return send_file(filename, as_attachment=True)
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
 
+# Render is strict lol
 #if __name__ == "__main__":
     #app.run(debug=True)
